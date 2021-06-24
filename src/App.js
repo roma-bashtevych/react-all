@@ -3,7 +3,6 @@ import './App.css';
 import {useEffect, useState} from "react";
 import {getPost, getPosts} from "./services/API";
 import Posts from "./components/posts/Posts";
-import UserDetails from "./components/userdetails/UserDetails";
 import PostDetails from "./components/postdetails/PostDetails";
 
 
