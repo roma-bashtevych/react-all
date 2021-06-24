@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import './App.css';
+import {useEffect, useState} from "react";
+import {getUsers, getUser} from "./services/API";
+import Users from "./components/users/Users";
+import UserDetails from "./components/userdetails/UserDetails";
+
+export default function App() {
+
+    let [users, setUsers] = useState([]);
+
+    let [userDetails, setUserDetails] = useState(null)
+
+  useEffect(() => {
+      getUsers().then(response => {
+        setUsers(response.data)
+            })
+  }, [])
+
+    function selectUser(id){
+             getUser(id).then(({data}) => {
+                 setUserDetails(data)
+                   })
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+         <div>
+<Users items={users} selectUser={selectUser}/>
+             <hr/>
+             {
+              userDetails &&  <UserDetails item={userDetails}/>
+             }
+                 </div>
   );
 }
 
-export default App;
+
