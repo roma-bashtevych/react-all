@@ -1,9 +1,9 @@
 import './Post.css'
 export default function Post({item:{id, title, body}}) {
     return (
-        <div className={'card'}>
+        <div>
             <h2 className={'title'}>{id} - {title}</h2>
-            <p className={'text'}>{body}</p>
+            <p>{body}</p>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import './Users.css'
+import User from "../user/User";
 
 export default function Users() {
 
@@ -19,7 +20,7 @@ export default function Users() {
         <div>
             {
                 usersList
-                    .map((value, index) => <div className={'parents'} key={index}><div>{value.id} - {value.name}</div></div>)
+                    .map((value, index) => <User key={index} item={value}/>)
 
             }
         </div>

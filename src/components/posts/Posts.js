@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Post from "../post/Post";
 import './Posts.css'
 
-export default function Posts() {
+export default function Posts({userId}) {
 
     let [postsList, setPostsList] = useState([])
 
@@ -14,10 +14,11 @@ export default function Posts() {
                       setPostsList(value)
                   })
     },[])
+    const filter = postsList.filter(value => value.userId === userId)
     return (
         <div className={'wrap'}>
             {
-                postsList.map((value, index) => <Post key={index} item={value}/>)
+                filter.map((value, index) => <Post key={index} item={value}/>)
             }
         </div>
     )
