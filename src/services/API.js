@@ -10,13 +10,28 @@
 //        };
 //  export {getPost, getPosts};
 
+// import axios from 'axios';
+//
+// let axiosInstance = axios.create({
+// 	baseURL: 'https://jsonplaceholder.typicode.com/posts'
+// });
+//
+// const getPosts = () => axiosInstance.get();
+// const  getPost = (id) => axiosInstance.get('/' + id);
+//
+// export {getPost, getPosts}
+
+
+
 import axios from 'axios';
 
 let axiosInstance = axios.create({
-	baseURL: 'https://jsonplaceholder.typicode.com/posts'
+	baseURL: 'https://jsonplaceholder.typicode.com'
 });
 
-const getPosts = () => axiosInstance.get();
-const  getPost = (id) => axiosInstance.get('/' + id);
+const getUsers = () => axiosInstance.get('/users')
+const getUser = (id) => axiosInstance.get('/' + id)
+const getPosts = (id) => axiosInstance.get('users/' + id + '/posts/')
 
-export {getPost, getPosts}
+
+export {getUser, getUsers, getPosts}

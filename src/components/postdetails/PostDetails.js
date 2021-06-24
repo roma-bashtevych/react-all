@@ -1,9 +1,9 @@
 import './PostDetails.css'
-export default function PostDetails({item}) {
+export default function PostDetails({it}) {
     return (
         <div className={'text'}>
             {
-                item.body
+                it.map(value => <div key={value.id}>{value.body}</div>)
             }
         </div>
     )
