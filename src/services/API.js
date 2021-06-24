@@ -1,22 +1,22 @@
-//
-// const getUsers  = () => {
-//      return fetch('https://jsonplaceholder.typicode.com/users')
+
+// const getPosts  = () => {
+//      return fetch('https://jsonplaceholder.typicode.com/posts')
 //               .then(value => value.json());
 //              };
 //
-// const getUser  = (id) => {
-//     return fetch('https://jsonplaceholder.typicode.com/users' + id)
+// const getPost  = (id) => {
+//     return fetch('https://jsonplaceholder.typicode.com/posts' + id)
 //         .then(value => value.json());
 //        };
-//  export {getUser, getUsers};
+//  export {getPost, getPosts};
 
 import axios from 'axios';
 
 let axiosInstance = axios.create({
-	baseURL: 'https://jsonplaceholder.typicode.com/users'
+	baseURL: 'https://jsonplaceholder.typicode.com/posts'
 });
 
-const getUsers = () => axiosInstance.get();
-const  getUser = (id) => axiosInstance.get('/' + id);
+const getPosts = () => axiosInstance.get();
+const  getPost = (id) => axiosInstance.get('/' + id);
 
-export {getUser, getUsers}
+export {getPost, getPosts}
