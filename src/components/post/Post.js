@@ -3,9 +3,9 @@ export default function Post({item, postSelect}) {
     return (
         <div className={'row'}>
             {item.id} - {item.title}
-            <button onClick={() => {
+            <button className={'btn'} onClick={() => {
                postSelect(item.id) }
-            }>click me</button>
+            }>deploy</button>
         </div>
     )
 }

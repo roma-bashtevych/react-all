@@ -3,3 +3,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+.btn{
+    background-color: silver;
+    color: blach;
+    font-weight: 700;
+}

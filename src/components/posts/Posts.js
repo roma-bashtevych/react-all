@@ -5,7 +5,7 @@ export default function Posts({items, postSelect}) {
     return (
         <div className={'container'}>
             {
-                items.map(value => <Post item={value} postSelect={postSelect}/>)
+                items.map(value => <Post key={value.id} item={value} postSelect={postSelect}/>)
             }
         </div>
     )
