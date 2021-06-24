@@ -1,0 +1,7 @@
+.parents{
+    border: 1px solid silver;
+    }
+
+.parents:nth-child(even){
+    background-color: cornflowerblue;
+}
