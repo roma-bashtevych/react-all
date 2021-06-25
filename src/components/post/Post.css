@@ -1,11 +1,18 @@
 .row{
-    font-size: 15px;
     display: flex;
     justify-content: space-between;
+    width: 800px;
+    border-bottom: 5px solid skyblue;
+    margin: 5px;
+    padding: 10px;
 }
 
-.btn{
-    background-color: silver;
-    color: black;
-    font-weight: 700;
+.post-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: darkcyan;
+    color: aliceblue;
+    text-transform: lowercase;
 }

@@ -1,0 +1,17 @@
+.user{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    border-bottom: 5px solid silver;
+    margin: 20px 10px;
+    padding: 20px 10px;
+}
+.user-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: aliceblue;
+    text-transform: uppercase;
+}
