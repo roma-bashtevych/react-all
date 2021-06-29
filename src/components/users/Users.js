@@ -1,10 +1,19 @@
 import User from "./user/User";
+import {useEffect, useState} from "react";
+import {getUsers} from "../services/API";
 
-export default function Users({items}) {
+export default function Users() {
+    let [users, setUsers] = useState([])
+    useEffect(() => {
+        getUsers().then(response => {
+            setUsers(response.data)
+            // console.log(response.data)
+        })
+    }, [])
     return (
         <div>
             {
-                items.map(value => <User key={value.id} item={value}/>)
+                users.map(value => <User key={value.id} item={value}/>)
             }
         </div>
     )

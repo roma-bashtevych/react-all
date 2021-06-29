@@ -1,0 +1,12 @@
+.postDetails-title{
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.postDetails-text{
+    color: #5f5757;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
