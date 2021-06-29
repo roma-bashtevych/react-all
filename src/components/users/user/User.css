@@ -24,13 +24,21 @@
     color: #fff;
 }
 
+.site,
+.phone,
 .title + a {
     color: #fff;
     transition: color 0.5s ease;
 }
 
+.site:hover,
+.phone:hover,
 .title + a:hover {
     color: #CB3B48;
+}
+
+.contacts{
+    color: #fff;
 }
 
 .address {

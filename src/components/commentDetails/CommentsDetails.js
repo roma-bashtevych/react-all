@@ -1,7 +1,7 @@
 import Comment from "../comments/comment/Comment";
 import './CommentsDetails.css'
 export default function CommentsDetails({com}) {
-    console.log(com)
+    // console.log(com)
     return (
         <div className={'comm-bg'}>
             {

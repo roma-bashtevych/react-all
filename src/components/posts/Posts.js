@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {getPosts} from "../services/API";
 
 export default function Posts() {
+
     let [posts, setPosts] = useState([])
     useEffect(() => {
         getPosts().then(response => {

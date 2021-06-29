@@ -20,6 +20,8 @@ export default function User({item}) {
                <div>
                    <h3 className={'title'}>{item.id} - {item.name}</h3>
                    <a href="mailto">{item.email}</a>
+                  <div className={'contacts'}>Phone number-<a className={'phone'} href="#">{item.phone}</a></div>
+                   <div className={'contacts'}>Website-<a className={'site'} href="#">{item.website}</a></div>
                </div>
                <div className={'address'}>Address:
                    <div>City -- {item.address.city}</div>

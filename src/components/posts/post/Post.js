@@ -4,6 +4,7 @@ import {useState} from "react";
 import CommentsDetails from "../../commentDetails/CommentsDetails";
 
 export default function Post({item}) {
+
     let [commentDetails, setCommentDetails] = useState(null)
     let [toggle, setToggle] = useState(false)
 

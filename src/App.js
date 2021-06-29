@@ -2,8 +2,6 @@ import {BrowserRouter as Router, Route, Switch, NavLink} from "react-router-dom"
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";
-import {useEffect, useState} from "react";
-import {getComments, getPosts, getUsers} from "./components/services/API";
 import './App.css'
 
 export default function App() {
@@ -23,15 +21,9 @@ export default function App() {
                         <Route path={'/'} exact render={() => {
                             return <div></div>;
                         }}/>
-                        <Route path={'/users'} render={() => {
-                            return <Users/>;
-                        }}/>
-                        <Route path={'/posts'} render={() => {
-                            return <Posts/>
-                        }}/>
-                        <Route path={'/comments'} render={() => {
-                            return <Comments/>
-                        }}/>
+                        <Route path={'/users'} component={Users}/>
+                        <Route path={'/posts'} component={Posts}/>
+                        <Route path={'/comments'} component={Comments}/>
                     </Switch>
                 </div>
 
