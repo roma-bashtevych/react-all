@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.user-card{
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid #505050;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+.title{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 27px;
+    color: #fff;
+}
+.title + a{
+    color: #fff;
+    transition: color 0.5s ease;
+}
+
+.title + a:hover{
+    color: #CB3B48;
+}
+.address{
+    color: #fff;
+}

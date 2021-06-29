@@ -1,0 +1,22 @@
+.comm-title {
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.comm-title a {
+    padding-left: 20px;
+    color: #fff;
+    transition: color 0.5s ease;
+}
+
+.comm-title a:hover {
+    color: #CB3B48;
+}
+
+.comm-text {
+    color: #5f5757;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
