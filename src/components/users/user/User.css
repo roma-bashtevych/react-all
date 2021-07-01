@@ -1,5 +1,8 @@
 .title__user{
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
 }
 .title__user-link{
     font-size: 15px;

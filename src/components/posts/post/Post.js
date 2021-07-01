@@ -1,15 +1,13 @@
-import {NavLink} from "react-router-dom";
 import './Post.css'
-
 export default function Post({item}) {
-
+    // console.log(item)
     return (
-        <div className={'posts-flex'}>
-            <h5>{item.id} - {item.title}</h5>
-            <NavLink className={'title__post-link'}  to={{
-            pathname: '/posts/' + item.id,
-            state: item
-        }}>details</NavLink>
-        </div>
+       <div className={'post-card'}>
+           <div className={'post-main'}>
+               post: {item.id} - <span className={'post-title'}>{item.title}</span>
+           </div>
+           <p className={'post-text'}>{item.body}</p>
+       </div>
     )
 }
+            
