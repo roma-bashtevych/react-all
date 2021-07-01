@@ -1,0 +1,23 @@
+.posts-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    /*width: 100%;*/
+    margin-bottom: 20px;
+}
+.title__post-link{
+    font-size: 15px;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #FFFFFF;
+    padding: 5px 5px;
+    transition: all .5s;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-left: 20px;
+}
+
+.title__post-link:hover{
+    background: rgba(255, 255, 255, 0.50);
+}

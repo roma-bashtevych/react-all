@@ -1,0 +1,15 @@
+.card-users{
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #FFFFFF;
+    padding: 30px 62px;
+    position: fixed;
+
+}
+
+.title__us{
+    font-size: 20px;
+}
+
+subtitle__us{
+    font-size: 15px;
+}

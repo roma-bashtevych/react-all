@@ -1,0 +1,4 @@
+.comments-flex{
+    display: flex;
+    column-gap: 50px;
+}
