@@ -25,7 +25,6 @@ export default function Users() {
                     <Route path={'/users/:id/posts'} component={Posts} />
                 </Switch>
             </div>
-
         </div>
     )
 }
