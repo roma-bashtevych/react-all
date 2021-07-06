@@ -1,0 +1,17 @@
+
+.comments-card{
+    background-color: #21062A;
+    border: 1px solid #C4C4C4;
+    margin: 10px;
+    padding: 10px;
+}
+.comments-title{
+    color: silver;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.comments-text{
+    color: #C4C4C4;
+    font-weight: 300;
+}

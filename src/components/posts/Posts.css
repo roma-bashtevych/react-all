@@ -1,0 +1,16 @@
+.posts-card{
+    background-color: #21062A;
+    border: 1px solid #C4C4C4;
+    margin: 10px;
+    padding: 10px;
+}
+.posts-title{
+    color: silver;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.posts-text{
+    color: #C4C4C4;
+    font-weight: 300;
+  }
