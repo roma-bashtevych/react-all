@@ -8,27 +8,15 @@ import {createStore} from "redux";
 import {Provider} from "react-redux";
 
 const initialState = {
-    counterValue: 0,
     users: [],
     posts: [],
-    comments: []
+    comments: [],
+    todoo: ''
 }
 
-const counterReducer = (state = initialState, action) => {
+const reducerFunc = (state = initialState, action) => {
     // console.log(state, action)
     switch(action.type){
-        case 'INCREMENT':{
-            return {...state, counterValue: state.counterValue + 1}
-        }
-        case 'INCREMENT_CUSTOM':{
-            return {...state, counterValue: state.counterValue + action.payload}
-        }
-        case 'DECREMENT':{
-            return {...state, counterValue: state.counterValue - 1}
-        }
-        case 'RESET':{
-            return {...state, counterValue: 0}
-        }
         case 'SET_USERS':{
             return {...state, users: action.payload}
         }
@@ -38,11 +26,14 @@ const counterReducer = (state = initialState, action) => {
         case 'SET_COMMENTS':{
             return {...state, comments: action.payload}
         }
+        case 'SET_TODOO':{
+            return {...state, todoo: action.payload}
+        }
         default:
             return state;
     }
 }
-const store = createStore(counterReducer)
+const store = createStore(reducerFunc)
 // console.log(store)
 
 // store.subscribe( () => {

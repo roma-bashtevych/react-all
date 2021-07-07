@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import './Posts.css'
+
+import Post from "./post/Post";
 
 export default function Posts() {
     const dispath = useDispatch()
@@ -21,10 +22,7 @@ export default function Posts() {
 
     return (
         <div>
-            {posts.map(value=> <div className={'posts-card'}>
-                <h3 className={'posts-title'}>{value.title}</h3>
-                <p className={'posts-text'}>{value.body}</p>
-            </div>)}
+            {posts.map(value=> <Post key={value.id} item={value}/>)}
         </div>
     )
 }
