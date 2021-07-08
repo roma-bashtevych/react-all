@@ -1,0 +1,46 @@
+.todo__form{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.todo__input{
+    font-family: 'RobotoCondensed-Regular';
+     height: 70px;
+    width: 511px;
+    border: 2px solid #C4C4C4;
+    padding: 0 15px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.todo__input::placeholder{
+    color: #888888;
+    padding: 0 15px;
+    font-family: 'RobotoCondensed-Regular';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.todo__btn{
+    background: #C4C4C4;
+    border: 2px solid #C4C4C4;
+    color:#FFFFFF;
+    padding: 24px 27px;
+    font-size: 24px;
+    line-height: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.todo__btn:hover{
+    background: #ffffff;
+    color: #C4C4C4;
+}

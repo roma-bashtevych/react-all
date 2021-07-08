@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.todo__loading{
+    text-align: center;
+    font-size: 95px;
+    color: silver;
+    padding-top: 50px;
+}
+
+.todo__list{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-color: #282c34;
+}
+
+.todo__card{
+border: 1px solid silver;
+    width: 600px;
+    padding: 10px;
+    background-color: #fff;
+}
+.todo__card-content{
+    margin-bottom: 20px;
+}
+
+.todo__status{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo__status-btn{
+    background: #C4C4C4;
+    border: 2px solid #C4C4C4;
+    color:#FFFFFF;
+    padding: 14px 17px;
+    font-size: 24px;
+    line-height: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.todo__descript{
+    font-family: 'RobotoCondensed-Regular';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.todo__delete-btn{
+    background: #C4C4C4;
+    border: 2px solid #C4C4C4;
+    color:#FFFFFF;
+    padding: 24px 27px;
+    font-size: 24px;
+    line-height: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.todo__delete-btn:hover,
+.todo__status-btn:hover{
+    background: #282c34;
+    color: #C4C4C4;
+}
