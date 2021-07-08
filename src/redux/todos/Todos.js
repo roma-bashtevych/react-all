@@ -23,7 +23,6 @@ export const Todos = ({todos, isLoading, delTodo, statusTodos, todoStatus}) => {
                                 () => {
                                     statusTodos(todo.id, todo.completed)
                                     console.log(todo.completed)
-                                    // console.log(todo.completed)
                                     // console.log(statusTodos(todo.id, todo.completed))
                                 }
                             }>status
