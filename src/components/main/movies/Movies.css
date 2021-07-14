@@ -1,0 +1,34 @@
+.movies-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    margin-bottom: 62px;
+    width: 100%;
+}
+
+.movies-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pagination {
+    list-style: none;
+    column-gap: 10px;
+    display: flex;
+}
+
+.pagination li a {
+    color: #717171;
+    border: 1px solid #717171;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.active,
+.pagination li:hover {
+    background-color: #eae7e7;
+    color: #0c0409;
+}
+

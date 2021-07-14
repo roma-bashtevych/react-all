@@ -1,0 +1,50 @@
+.bg__ligth {
+    background-color: #fff;
+    height: 100%;
+}
+
+.bg__dark {
+    background-color: #031d33;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.main-nav {
+    display: flex;
+    column-gap: 50px;
+    padding: 50px;
+}
+
+.theme-button,
+.main-route {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 46px;
+    padding: 0 26px;
+    border: none;
+    background: linear-gradient(to right, rgba(30, 213, 169, 1) 0%, rgba(1, 180, 228, 1) 100%);
+    border-radius: 30px;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.theme-button-dark {
+    color: #000;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid #000;
+ }
+
+.theme-button-ligth{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px solid #000;
+ }
+
+.theme-button:hover,
+.main-route:hover{
+    background: linear-gradient(to right, rgb(133, 248, 220) 0%, rgb(35, 116, 138) 100%);
+}

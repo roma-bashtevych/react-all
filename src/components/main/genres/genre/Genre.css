@@ -1,0 +1,9 @@
+.genres-item{
+    text-decoration: none;
+    color: #717171;
+    transition: color 0.5s ease;
+}
+
+.genres-item:hover{
+    color: darkcyan;
+}
