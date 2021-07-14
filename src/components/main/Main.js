@@ -2,21 +2,17 @@ import {BrowserRouter as Router, NavLink, Switch} from "react-router-dom";
 import './Main.css'
 import Routes from "../route/Routes";
 import {useDispatch, useSelector} from "react-redux";
+import {darkThem, ligthThem} from "../redux/actionCreator";
 
 export default function Main() {
 
     const dispatch = useDispatch()
     const theme = useSelector(state => state.themeReduser)
-    console.log(theme.theme)
     const lightTheme = () => {
-        dispatch({
-            type: 'LIGHT_THEME'
-        })
+        dispatch(ligthThem())
     }
     const darkTheme = () => {
-        dispatch({
-            type: 'DARK_THEME'
-        })
+        dispatch(darkThem())
     }
     return (
         <div className={theme.theme}>

@@ -11,8 +11,11 @@ let getMovies = (pageNumber) =>	axiosInstance.get('discover/movie?api_key=' + AP
 let getGenres = () => axiosInstance.get('genre/movie/list?api_key=' + APIKEY + LANGUAGE)
 let getMovie = (movieId) => axiosInstance.get('movie/' + movieId + '?api_key=' + APIKEY + LANGUAGE)
 
-let getImage = (nameImage) => axiosInstance.get('https://image.tmdb.org/t/p/w500/' + nameImage)
+
+const imgURL = 'https://image.tmdb.org/t/p/'
+let getPoster = (nameImage) => axiosInstance.get(imgURL + 'w300/' + nameImage)
+let getImage = (nameImage) => axiosInstance.get(imgURL + 'w500/' + nameImage)
 
 
-export {getMovies, getGenres, getMovie, getImage}
+export {getMovies, getGenres, getMovie, getImage, getPoster}
 

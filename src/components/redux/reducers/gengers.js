@@ -1,3 +1,5 @@
+import {SHOW_GENRES} from "../actionTypes";
+
 const initianState = {
     genres: [],
     loading: true
@@ -5,7 +7,7 @@ const initianState = {
 
 export const gengersReducer = (state = initianState, action) => {
     switch (action.type) {
-        case 'SHOW_GENRES': {
+        case SHOW_GENRES: {
             return {...state, genres: action.payload.genres, loading: false}
         }
         default:

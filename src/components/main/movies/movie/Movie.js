@@ -2,7 +2,7 @@ import './Movie.css'
 import React, {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import ReactStarsRating from 'react-awesome-stars-rating'
-import {getImage} from "../../../services/API";
+import {getPoster} from "../../../services/API";
 
 export default function Movie({movie}) {
     const onChange = (value) => {
@@ -11,7 +11,7 @@ export default function Movie({movie}) {
 
     let [image, setImage] = useState([])
     useEffect(() => {
-        getImage(movie.poster_path).then(value =>
+        getPoster(movie.poster_path).then(value =>
             setImage(value.config.url)
         )
     }, [])

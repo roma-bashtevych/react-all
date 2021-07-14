@@ -3,16 +3,14 @@ import { getGenres } from "../../services/API";
 import { useDispatch, useSelector } from "react-redux";
 import Genre from "./genre/Genre";
 import './Genres.css'
+import {showGenres} from "../../redux/actionCreator";
 
 export default function Genres() {
     const dispath = useDispatch()
     const genres = useSelector((state => state.gengersReducer))
     useEffect(() => {
         getGenres().then(value =>
-            dispath({
-                type: 'SHOW_GENRES',
-                payload: value.data
-            })
+            dispath(showGenres(value.data))
         )
     }, [])
 

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getMovie} from "../../../../services/API";
+import {getImage, getMovie} from "../../../../services/API";
 import './MovieDetails.css'
 
 export default function MovieDetails(props) {
@@ -10,15 +10,21 @@ export default function MovieDetails(props) {
         getMovie(id).then(value => setMovies(value.data))
     }, [])
 
+    let [image, setImage] = useState([])
+    useEffect(() => {
+        getImage(movie.backdrop_path).then(value => setImage(value.config.url))
+    })
+
     return (
         <div className={'movieDetails'}>
             <div className={'movieDetails__inner'}>
                 <h1 className={'movieDetails__title'}>{movie.title}</h1>
                 <h6>({movie.original_title})</h6>
                 <h3 className={'movieDetails__subtitle'}>{movie.tagline}</h3>
-                <img
-                    src={'https://image.tmdb.org/t/p/w500/' + movie.poster_path}
-                     alt=""/>
+                {
+                    movie.backdrop_path &&
+                    <img src={image} alt={movie.title}/>
+                }
                 <p className={'movieDetails__status'}>{movie.status}</p>
             </div>
             <div className={'movieDetails__info'}>

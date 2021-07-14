@@ -3,6 +3,7 @@ import {getMovies} from "../../services/API";
 import Movie from "./movie/Movie";
 import './Movies.css'
 import ReactPaginate from 'react-paginate'
+import {showMovies} from "../../redux/actionCreator";
 
 export default function Movies() {
     const dispatch = useDispatch()
@@ -10,10 +11,7 @@ export default function Movies() {
     function handlePageClick(data) {
        let pageNumber = (1 + data.selected)
         getMovies(pageNumber).then(value =>
-            dispatch({
-                type: 'SHOW_MOVIES',
-                payload: value.data
-            }))
+            dispatch(showMovies(value.data)))
          }
 
     return (
